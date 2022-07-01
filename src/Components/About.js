@@ -1,3 +1,9 @@
-export default function About() {
-  return <h1>INI ABOUT</h1>;
+import React from "react";
+
+class About extends React.Component {
+  render() {
+    return <h1>ini halaman about</h1>;
+  }
 }
+
+export default About;

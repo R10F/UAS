@@ -4,7 +4,7 @@ class Layout extends React.Component {
   render() {
     return (
       <main>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top ">
           <div className="container px-4 px-lg-5">
             <a className="navbar-brand" href="#!">
               Samsan Tech
