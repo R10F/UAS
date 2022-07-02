@@ -1,15 +1,16 @@
 import React, { Fragment } from "react";
 import "../App.css";
+
 class Home extends React.Component {
   constructor() {
     super();
     this.items = [
-      [require("../assets/img/card1.png"), "ROG Zephyrus Duo (2022) ", "Rp 59.999.000", "Rp 58.999.000"],
-      [require("../assets/img/card2.png"), "ROG Strix Scar 17 (2022)", "Rp 46.408.000", "Rp 45.408.082"],
-      [require("../assets/img/card3.png"), "ROG Zephyrus M16 (2022) ", "Rp44.389.900", "Rp43.389.900"],
-      [require("../assets/img/card2.png"), "ROG Strix Scar 15 (2022) ", "Rp34.298.991", "Rp33.298.991"],
-      [require("../assets/img/card4.png"), "ASUS TUF Gaming F15 (2022) ", "Rp23.499.000", "Rp22.499.000"],
-      [require("../assets/img/card5.png"), "2021 ASUS TUF Dash F15 ", "Rp18.999.000", "Rp17.999.000"],
+      [require("../assets/img/card/card1.png"), "ROG Zephyrus Duo (2022) ", "Rp 59.999.000", "Rp 58.999.000"],
+      [require("../assets/img/card/card2.png"), "ROG Strix Scar 17 (2022)", "Rp 46.408.000", "Rp 45.408.082"],
+      [require("../assets/img/card/card3.png"), "ROG Zephyrus M16 (2022) ", "Rp44.389.900", "Rp43.389.900"],
+      [require("../assets/img/card/card2.png"), "ROG Strix Scar 15 (2022) ", "Rp34.298.991", "Rp33.298.991"],
+      [require("../assets/img/card/card4.png"), "ASUS TUF Gaming F15 (2022) ", "Rp23.499.000", "Rp22.499.000"],
+      [require("../assets/img/card/card5.png"), "2021 ASUS TUF Dash F15 ", "Rp18.999.000", "Rp17.999.000"],
     ];
   }
   render() {
@@ -78,13 +79,13 @@ class Home extends React.Component {
             </div>
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img src={require("../assets/img/banner1.png")} className="d-block w-100 img-fluid" alt="banner1" />
+                <img src={require("../assets/img/banner/banner1.png")} className="d-block w-100 img-fluid" alt="banner1" />
               </div>
               <div className="carousel-item">
-                <img src={require("../assets/img/banner2.png")} className="d-block w-100 img-fluid" alt="banner2" />
+                <img src={require("../assets/img/banner/banner2.png")} className="d-block w-100 img-fluid" alt="banner2" />
               </div>
               <div className="carousel-item">
-                <img src={require("../assets/img/banner3.png")} className="d-block w-100 img-fluid" alt="banner3" />
+                <img src={require("../assets/img/banner/banner3.png")} className="d-block w-100 img-fluid" alt="banner3" />
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
