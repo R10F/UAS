@@ -13,7 +13,6 @@ export default function SingleCatalog(props){
                     <div className="card">
                         <img className="card-img img-fluid" src={product.src} alt={product.nama} />
                     </div>
-                    
                 </div>
                 <div className="col-lg-7">
                     <h1>{product.nama}</h1>
@@ -33,7 +32,7 @@ export default function SingleCatalog(props){
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ipsam magnam ea quas ipsum assumenda, nemo sit, eaque non placeat sunt aliquid quaerat debitis architecto. Deserunt ipsum nam officiis unde.
                     </p>
                     <div className="d-flex justify-content-end">
-                        <button className="btn btn-outline-dark text-right">Add to Cart</button>
+                        <button className="btn btn-outline-dark text-right" onClick={() => {props.addToCart(product.id, 1)}}>Add to Cart</button>
                     </div>
                     
                 </div>
