@@ -2,9 +2,7 @@ import React from "react";
 import Footer from "../components/admin/Footer";
 
 class Login extends React.Component {
-  login = () => {
-    
-  }
+  login = () => {};
 
   render() {
     return (
@@ -16,7 +14,9 @@ class Login extends React.Component {
                 <div class="row justify-content-center">
                   <div class="col-lg-5">
                     <div class="card shadow-lg border-0 rounded-lg mt-5">
-                      <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                      <div class="card-header">
+                        <h3 class="text-center font-weight-light my-4">Login</h3>
+                      </div>
                       <div class="card-body">
                         <form>
                           <div class="form-floating mb-3">
@@ -28,13 +28,13 @@ class Login extends React.Component {
                             <label for="inputPassword">Password</label>
                           </div>
                           <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                            <a class="btn btn-primary" href="index.html">Login</a>
+                            <a class="btn btn-primary" href="index.html">
+                              Login
+                            </a>
                           </div>
                         </form>
                       </div>
-                      <div class="card-footer text-center py-3">
-                        Only admin login is available!
-                      </div>
+                      <div class="card-footer text-center py-3">Only admin login is available!</div>
                     </div>
                   </div>
                 </div>
