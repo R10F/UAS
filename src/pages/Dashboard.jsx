@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Chart as ChartJS } from "chart.js/auto";
 import { Chart } from "react-chartjs-2";
 import { FcSalesPerformance } from "react-icons/fc";
@@ -24,7 +25,7 @@ class Dashboard extends React.Component {
           pointHoverBackgroundColor: "rgba(2,117,216,1)",
           pointHitRadius: 50,
           pointBorderWidth: 2,
-          data: Array.from({ length: 12 }, () => parseInt(Math.random() * 50000)),
+          data: Array.from({ length: 12 }, () => parseInt(Math.random() * 50000))
         },
       ],
     };
@@ -32,17 +33,13 @@ class Dashboard extends React.Component {
     this.tableData = [];
   }
 
-  logout = () => {};
-
   render() {
     return (
       <div class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark justify-content-between">
           <div className="container">
-            <a class="navbar-brand ps-3" href="index.html">
-              Start Bootstrap
-            </a>
-            <button className="btn btn-outline-danger">Logout</button>
+            <Link to="/" className="navbar-brand ps-3">Apple Tech</Link>
+            <Link to="/" className="btn btn-outline-danger">Logout</Link>
           </div>
         </nav>
 

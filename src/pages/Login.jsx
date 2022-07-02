@@ -2,7 +2,23 @@ import React from "react";
 import Footer from "../components/admin/Footer";
 
 class Login extends React.Component {
-  login = () => {};
+  constructor() {
+    super();
+    this.state = { showAlert: false };
+  }
+
+  login = (e) => {
+    e.preventDefault();
+
+    const username = e.target.querySelector("#inputUsername").value;
+    const password = e.target.querySelector("#inputPassword").value;
+
+    if (username === "admin" && password === "admin") {
+      window.location.replace('/admin/dashboard');
+    } else {
+      this.setState({ showAlert: true });
+    }
+  };
 
   render() {
     return (
@@ -18,7 +34,11 @@ class Login extends React.Component {
                         <h3 class="text-center font-weight-light my-4">Login</h3>
                       </div>
                       <div class="card-body">
-                        <form>
+                        <div class={"alert alert-danger " + (this.state.showAlert ? '' : 'd-none')} role="alert">
+                          Incorrect username or password, you're not admin!
+                        </div>
+
+                        <form onSubmit={this.login}>
                           <div class="form-floating mb-3">
                             <input class="form-control" id="inputUsername" type="text" placeholder="Username" />
                             <label for="inputUsername">Username</label>
@@ -28,9 +48,7 @@ class Login extends React.Component {
                             <label for="inputPassword">Password</label>
                           </div>
                           <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                            <a class="btn btn-primary" href="index.html">
-                              Login
-                            </a>
+                            <button type="submit" class="btn btn-primary">Login</button>
                           </div>
                         </form>
                       </div>
