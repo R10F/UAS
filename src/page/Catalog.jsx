@@ -7,11 +7,11 @@ class Catalog extends React.Component {
     super();
     this.products = [
       [require("../assets/img/card/card1.png"), "ROG Zephyrus Duo (2022) ", "Rp 59.999.000", 4],
-      [require("../assets/img/card/card1.png"), "ROG Strix Scar 17 (2022)", "Rp 46.408.000", 5],
-      [require("../assets/img/card/card1.png"), "ROG Zephyrus M16 (2022) ", "Rp44.389.900", 5],
-      [require("../assets/img/card/card1.png"), "ROG Strix Scar 15 (2022) ", "Rp34.298.991", 3],
-      [require("../assets/img/card/card1.png"), "ASUS TUF Gaming F15 (2022) ", "Rp23.499.000", 4],
-      [require("../assets/img/card/card1.png"), "2021 ASUS TUF Dash F15 ", "Rp18.999.000", 5],
+      [require("../assets/img/card/card2.png"), "ROG Strix Scar 17 (2022)", "Rp 46.408.000", 5],
+      [require("../assets/img/card/card3.png"), "ROG Zephyrus M16 (2022) ", "Rp44.389.900", 5],
+      [require("../assets/img/card/card2.png"), "ROG Strix Scar 15 (2022) ", "Rp34.298.991", 3],
+      [require("../assets/img/card/card4.png"), "ASUS TUF Gaming F15 (2022) ", "Rp23.499.000", 4],
+      [require("../assets/img/card/card5.png"), "2021 ASUS TUF Dash F15 ", "Rp18.999.000", 5],
     ];
   }
 

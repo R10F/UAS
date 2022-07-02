@@ -1,6 +1,6 @@
 @font-face {
-  /* font-family: Marcellus;
-  src: url(./assets/font/Marcellus-Regular.ttf); */
+  font-family: Marcellus;
+  src: url(./assets/font/Marcellus-Regular.ttf);
   font-family: Epilogue;
   src: url(./assets/font/Epilogue-VariableFont_wght.ttf);
 }
@@ -64,4 +64,15 @@ body {
 #demo {
   font-size: 25px;
   font-family: "Fraunces", cursive;
+}
+
+.teks {
+  text-align: justify;
+  text-transform: capitalize;
+  font-family: "Marcellus";
+  font-size: 22px;
+}
+
+.judul {
+  font-family: "Epilogue";
 }

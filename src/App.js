@@ -5,7 +5,7 @@ import Home from "./page/Home";
 import Catalog from "./page/Catalog";
 import SingleCatalog from "./Components/SingleCatalog";
 import Cart from "./page/Cart";
-
+import About from "./page/About";
 import { Routes, Route } from "react-router-dom";
 
 class App extends React.Component {
@@ -18,8 +18,9 @@ class App extends React.Component {
           <Route path="/catalog" element={<Catalog />}>
             <Route path=":productId" element={<SingleCatalog />} />
           </Route>
+          <Route path="/about-us" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
         </Route>
-        <Route path="/cart" element={<Cart />} />
       </Routes>
     );
   }
