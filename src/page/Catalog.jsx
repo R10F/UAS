@@ -12,7 +12,7 @@ class Catalog extends React.Component{
         let allproduct = this.products.map((product) => {
             return (
                 <Product productDetail={product} key={product.id} >
-                    <button className="btn btn-outline-dark">Add to Cart</button>
+                    <button className="btn btn-outline-dark" onClick={() => {this.props.addToCart(product.id, 1)}}>Add to Cart</button>
                 </Product>
             )
         })
