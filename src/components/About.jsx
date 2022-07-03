@@ -31,24 +31,21 @@ class About extends React.Component {
         <header>
           <div className="container">
             <div className="row">
-              <h1 className="text-center my-3 text-primary judul" data-aos="fade-down">
+              <h1 className="text-center my-3 text-teal" data-aos="fade-down">
                 ABOUT US
               </h1>
 
               <div className="col teks" data-aos="zoom-in-down" data-aos-duration="1000">
-                <p>
-                  <strong className="text-danger">Laptopu </strong> merupakan salah satu toko e-commerce terbesar terutama dalam penjualan laptop gaming dimana penjualan setiap tahun meningkat semenjak tahun 2020. berdiri sejak tahun 2000
-                  awalnya laptopu menjual segala peralatan komputer seperti monitor,mouse,keyboard namun semenjak adanya era digital seperti ini dan laptopu melihat bahwa anak-anak zaman sekarang hobi bermain game maka laptopu beralih dari
-                  yang menjual peralatan komputer menjadi menjual laptop gaming. peralihan penjualan ini pun tentu tidak mudah seperti membalikkan telapak tangan ada rintangan-rintangan yang dihadapi oleh laptopu dalam mencoba menjual
-                  laptop gaming ini namun karena semangat kami yang tidak menyerah akhirnya laptopu berhasil menduduki posisi sebagai toko e-commerce terbesar di indonesia
+                <p className="text-justify">
+                  <strong className="text-danger">Laptopu </strong> merupakan salah satu toko e-commerce terbesar dan terpercaya yang berfokus pada penjualan laptop gaming. Berdiri sejak tahun 2000, awalnya Laptopu menjual segala peralatan komputer seperti monitor, mouse, dan keyboard. Namun, dalam kurun waktu 5 tahun terakhir, Laptopu menspesifikasikan diri menjadi distributor laptop gaming. Peralihan ini tentu tidak semudah membalikkan telapak tangan. Banyaknya rintangan yang dihadapi oleh Laptopu tidak membuat semangat kami surut. Di tahun 2022 ini, Laptopu mampu mengukuhkan namanya sebagai salah satu e-commerce terbesar di Indonesia.
                   <br />
                   <br />
-                  ingin mengenal lebih dekat dengan kami ? silahkan menghubungi kami dengan mengisi form dibawah
+                  Ingin mengenal kami lebih jauh? Silakan menghubungi kami dengan mengisi form di bawah
                 </p>
               </div>
             </div>
             <div className="row">
-              <h1 className="text-center mt-3 mb-2 text-warning judul" data-aos="fade-down">
+              <h1 className="text-center mt-3 mb-2 text-teal judul" data-aos="fade-down">
                 CONTACT US
               </h1>
             </div>
