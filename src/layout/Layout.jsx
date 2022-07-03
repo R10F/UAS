@@ -1,61 +1,38 @@
 import React from "react";
-import { Outlet, NavLink, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 class Layout extends React.Component {
   render() {
     return (
       <main>
         <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-          <div className="container px-4 px-lg-5">
+          {/* <div className="container px-4 px-lg-5">
             <Link to="/" className="navbar-brand">
               Laptopu &#128187;
-            </Link>
+            </Link> */}
+          <div className="container px-2 px-lg-3">
+            <img src={require("../assets/img/laptopu2.png")} width="300px" alt="LaptopU Logo" />
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                 <li className="nav-item">
-                  <NavLink to="/" className="nav-link active" aria-current="page" href="#!">
+                  <NavLink to="/" className="nav-link" aria-current="page" href="#!">
                     Home
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="/about-us" className="nav-link">
-                    About Us
+                  <NavLink to="/catalog" className="dropdown-item nav-link">
+                    All Products
                   </NavLink>
-                </li>
-                <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" id="navbarDropdown" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Shop
-                  </a>
-                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li>
-                      <Link to="/catalog" className="dropdown-item nav-link">
-                        All Products
-                      </Link>
-                    </li>
-                    <li>
-                      <hr className="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#!">
-                        Popular Items
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#!">
-                        New Arrivals
-                      </a>
-                    </li>
-                  </ul>
                 </li>
               </ul>
               <form className="d-flex">
                 <button className="btn btn-outline-dark" type="submit">
                   <i className="bi-cart-fill me-1"></i>
                   Cart
-                  <span className="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                  <span className="badge bg-dark text-white ms-1 rounded-pill">{this.props.inCart}</span>
                 </button>
               </form>
             </div>
