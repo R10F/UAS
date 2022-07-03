@@ -3,10 +3,10 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import productList from "./productList";
 import Layout from "./layout/Layout";
-import Home from "./page/Home";
-import Catalog from "./page/Catalog";
+import Home from "./pages/Home";
+import Catalog from "./pages/Catalog";
 import SingleCatalog from "./components/SingleCatalog";
-import Cart from "./page/Cart";
+import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 

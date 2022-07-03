@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, NavLink, Link } from "react-router-dom";
 
 class Layout extends React.Component {
   render() {
@@ -28,13 +28,13 @@ class Layout extends React.Component {
                   </NavLink>
                 </li>
               </ul>
-              <form className="d-flex">
-                <button className="btn btn-outline-dark" type="submit">
+              <div className="d-flex">
+                <Link to="/cart" className="btn btn-outline-dark">
                   <i className="bi-cart-fill me-1"></i>
                   Cart
                   <span className="badge bg-dark text-white ms-1 rounded-pill">{this.props.inCart}</span>
-                </button>
-              </form>
+                </Link>
+              </div>
             </div>
           </div>
         </nav>
