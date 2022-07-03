@@ -7,11 +7,11 @@ class SalesProduct extends React.Component {
 
   addToCart = () => {
     this.props.addToCart(this.props.product.id, 1);
-  }
+  };
 
   render() {
     return (
-      <div className="col mb-5">
+      <div className="col mb-5" data-aos="flip-right" data-aos-duration="2500">
         <div className="card h-100">
           <div className="badge bg-dark text-white position-absolute" style={{ top: "0.5rem", right: "0.5rem" }}>
             Sale
@@ -32,7 +32,9 @@ class SalesProduct extends React.Component {
 
           <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
             <div className="text-center">
-              <button className="btn btn-outline-dark mt-auto add" onClick={this.addToCart}>Add to cart</button>
+              <button className="btn btn-outline-dark mt-auto add" onClick={this.addToCart}>
+                Add to cart
+              </button>
             </div>
           </div>
         </div>
@@ -41,4 +43,4 @@ class SalesProduct extends React.Component {
   }
 }
 
-export default SalesProduct
+export default SalesProduct;

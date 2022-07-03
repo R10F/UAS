@@ -4,16 +4,16 @@ import "aos/dist/aos.css";
 import Swal from "sweetalert2";
 
 class About extends React.Component {
-  kumpul = () => {
+  submit = () => {
     const forms = document.querySelectorAll(".needs-validation");
 
-    // Loop over them and prevent submission
     Array.from(forms).forEach((form) => {
       if (form.checkValidity() === true) {
         Swal.fire({
           icon: "success",
           text: "Message Sent!",
         });
+        form.reset();
       } else {
         Swal.fire({
           icon: "warning",
@@ -48,13 +48,13 @@ class About extends React.Component {
               </div>
             </div>
             <div className="row">
-              <h1 className="text-center mt-3 mb-2 text-warning judul" data-aos="fade-down">
+              <h1 className="text-center mt-3 mb-2 text-warning judul" data-aos="zoom-out-down">
                 CONTACT US
               </h1>
             </div>
             <div className="row justify-content-center">
               <div className="col-md-6">
-                <form className="needs-validation" data-aos="zoom-out-down" data-aos-duration="1500">
+                <form className="needs-validation" data-aos="zoom-out-down" data-aos-duration="1200">
                   <div className="form-floating mb-3">
                     <input type="text" className="form-control" id="floatingInput" placeholder="Input Your Name" required />
                     <label htmlFor="floatingInput">Name </label>
@@ -73,7 +73,7 @@ class About extends React.Component {
                   </div>
 
                   <div className="d-grid gap-2 mb-lg-4 mt-lg-4">
-                    <button className="btn btn-primary" type="button" onClick={this.kumpul}>
+                    <button className="btn btn-primary" type="button" onClick={this.submit}>
                       Submit
                     </button>
                   </div>
