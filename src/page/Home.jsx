@@ -1,16 +1,17 @@
 import React, { Fragment } from "react";
-import "../App.css";
+import SalesProduct from "../components/SalesProduct";
+
 class Home extends React.Component {
   constructor() {
     super();
-    this.items = [
-      [require("../assets/img/card1.png"), "ROG Zephyrus Duo (2022) ", "Rp 59.999.000", "Rp 58.999.000"],
-      [require("../assets/img/card2.png"), "ROG Strix Scar 17 (2022)", "Rp 46.408.000", "Rp 45.408.082"],
-      [require("../assets/img/card3.png"), "ROG Zephyrus M16 (2022) ", "Rp44.389.900", "Rp43.389.900"],
-      [require("../assets/img/card2.png"), "ROG Strix Scar 15 (2022) ", "Rp34.298.991", "Rp33.298.991"],
-      [require("../assets/img/card4.png"), "ASUS TUF Gaming F15 (2022) ", "Rp23.499.000", "Rp22.499.000"],
-      [require("../assets/img/card5.png"), "2021 ASUS TUF Dash F15 ", "Rp18.999.000", "Rp17.999.000"],
-    ];
+    // this.items = [
+    //   [require("../assets/img/card1.png"), "ROG Zephyrus Duo (2022) ", "Rp 59.999.000", "Rp 58.999.000"],
+    //   [require("../assets/img/card1.png"), "ROG Strix Scar 17 (2022)", "Rp 46.408.000", "Rp 45.408.082"],
+    //   [require("../assets/img/card1.png"), "ROG Zephyrus M16 (2022) ", "Rp44.389.900", "Rp43.389.900"],
+    //   [require("../assets/img/card1.png"), "ROG Strix Scar 15 (2022) ", "Rp34.298.991", "Rp33.298.991"],
+    //   [require("../assets/img/card1.png"), "ASUS TUF Gaming F15 (2022) ", "Rp23.499.000", "Rp22.499.000"],
+    //   [require("../assets/img/card1.png"), "2021 ASUS TUF Dash F15 ", "Rp18.999.000", "Rp17.999.000"],
+    // ];
   }
   render() {
     let countDownDate = new Date("Aug 1, 2022 23:59:00").getTime();
@@ -25,7 +26,10 @@ class Home extends React.Component {
       let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      const demo = document.getElementById("demo");
+      if (demo) {
+        demo.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      }
 
       if (distance < 0) {
         clearInterval(x);
@@ -33,39 +37,6 @@ class Home extends React.Component {
         document.querySelector("div.item").style.display = "none";
       }
     }, 1000);
-
-    let allItems = this.items.map((item) => {
-      return (
-        <Fragment>
-          <div className="col mb-5">
-            <div className="card h-100">
-              <div className="badge bg-dark text-white position-absolute" style={{ top: "0.5rem", right: "0.5rem" }}>
-                Sale
-              </div>
-
-              <img className="card-img-top" src={item[0]} alt="card" />
-
-              <div className="card-body p-4">
-                <div className="text-center">
-                  <h5 className="fw-bolder">{item[1]}</h5>
-                  <span className="fs-5 text-danger">{item[3]}</span>
-                  <br />
-                  <span className="text-muted text-decoration-line-through">
-                    <small>{item[2]}</small>{" "}
-                  </span>
-                </div>
-              </div>
-
-              <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div className="text-center">
-                  <button className="btn btn-outline-dark mt-auto add">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Fragment>
-      );
-    });
 
     return (
       <Fragment>
@@ -102,7 +73,17 @@ class Home extends React.Component {
           <div className="container px-4 px-lg-5 mt-5 ">
             <h2 className="text-center mb-2 sale text-danger">FLASH SALE</h2>
             <p id="demo" className="text-center text-info"></p>
-            <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center item">{allItems}</div>
+            <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center item">
+              {
+                this.props.products.map((product) => {
+                  if (product.isSales) {
+                    return (
+                      <SalesProduct product={product} addToCart={this.props.addToCart} />
+                    );
+                  }
+                })
+              }
+            </div>
           </div>
         </section>
       </Fragment>

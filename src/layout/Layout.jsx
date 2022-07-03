@@ -7,7 +7,7 @@ class Layout extends React.Component {
       <main>
         <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
           <div className="container px-2 px-lg-3">
-            <img src={require("../assets/img/laptopu2.png")} width="300px" alt="LaptopU Logo"/>
+            <img src={require("../assets/img/laptopu2.png")} width="300px" alt="LaptopU Logo" />
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>

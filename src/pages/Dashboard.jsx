@@ -5,10 +5,11 @@ import { Chart } from "react-chartjs-2";
 import { FcSalesPerformance } from "react-icons/fc";
 import { BsCart4 } from "react-icons/bs";
 import Footer from "../components/admin/Footer";
+import ProductItem from "../components/admin/ProductItem";
 
 class Dashboard extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.chartData = {
       labels: ["Jul 1", "Jul 2", "Jul 3", "Jul 4", "Jul 5", "Jul 6", "Jul 7", "Jul 8", "Jul 9", "Jul 10", "Jul 11", "Jul 12"],
@@ -29,8 +30,6 @@ class Dashboard extends React.Component {
         },
       ],
     };
-
-    this.tableData = [];
   }
 
   render() {
@@ -49,7 +48,7 @@ class Dashboard extends React.Component {
               <div class="container-fluid px-4">
                 <h1 class="text-center mt-4 mb-5">Dashboard</h1>
 
-                <div class="card mb-4">
+                <div class="card mb-5">
                   <div class="card-header text-center">
                     <FcSalesPerformance className="me-1" />
                     Sales Chart
@@ -66,28 +65,25 @@ class Dashboard extends React.Component {
                     Product List
                   </div>
                   <div class="card-body">
-                    <table id="datatablesSimple">
+                    <table className="table text-center align-middle">
                       <thead>
                         <tr>
+                          <th>Image</th>
                           <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
+                          <th>Price</th>
+                          <th>Rating</th>
+                          <th>Color</th>
                           <th>Action</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>Tiger Nixon</td>
-                          <td>System Architect</td>
-                          <td>Edinburgh</td>
-                          <td>61</td>
-                          <td>2011/04/25</td>
-                          <td>
-                            <button className="btn btn-warning">Edit</button>
-                          </td>
-                        </tr>
+                        {
+                          this.props.products.map(product => {
+                            return (
+                              <ProductItem product={product} editProduct={this.props.editProduct} />
+                            );
+                          })
+                        }
                       </tbody>
                     </table>
                   </div>
