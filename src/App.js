@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "./layout/Layout";
 import Home from "./page/Home";
 import Catalog from "./page/Catalog";
-import SingleCatalog from "./Components/SingleCatalog";
+import SingleCatalog from "./components/SingleCatalog";
 import Cart from "./page/Cart";
 import About from "./page/About";
 import { Routes, Route } from "react-router-dom";
