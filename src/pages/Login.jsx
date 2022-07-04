@@ -14,6 +14,7 @@ class Login extends React.Component {
     const password = e.target.querySelector("#inputPassword").value;
 
     if (username === "admin" && password === "admin") {
+      localStorage.setItem("laptopuLogin", true);
       window.location.replace('/admin/dashboard');
     } else {
       this.setState({ showAlert: true });
@@ -66,6 +67,12 @@ class Login extends React.Component {
         </div>
       </div>
     );
+  }
+
+  componentWillMount() {
+    if (localStorage.getItem("laptopuLogin") === 'true') {
+      window.location.replace('/admin/dashboard');
+    }
   }
 }
 
