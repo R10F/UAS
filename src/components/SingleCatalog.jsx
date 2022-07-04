@@ -6,6 +6,7 @@ export default function SingleCatalog(props) {
     let params = useParams();
     // let product = getProduct(parseInt(params.productId, 10));
     let product = props.getProduct(parseInt(params.productId, 10));
+
     return (
         <section className="container-fluid p-5">
             <div className="row  ">
@@ -16,22 +17,31 @@ export default function SingleCatalog(props) {
                 </div>
                 <div className="col-lg-7">
                     <h1>{product.nama}</h1>
-                    <h2>{'Rp ' + product.harga}</h2>
+                    {(product.isSales) ? 
+                        <h2 className="text-danger">{new Intl.NumberFormat("id-ID", {style: "currency", currency:"IDR", minimumFractionDigits:0}).format(product.salePrice)} 
+                        <small className="text-muted text-decoration-line-through fs-4">{new Intl.NumberFormat("id-ID", {style: "currency", currency:"IDR", minimumFractionDigits:0}).format(product.harga)}</small>
+                        </h2>
+                        :
+                        <h2>{new Intl.NumberFormat("id-ID", {style: "currency", currency:"IDR", minimumFractionDigits:0}).format(product.harga)}</h2>
+                    }
                     <p className="my-2 lh-lg">
 
                         <Star rating={product.rating} />
                         <br />
                         <b>Merk: </b> ASUS <br />
-                        <b>Deskripsi: </b> <br />
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet tenetur aliquid assumenda obcaecati doloribus dolorem praesentium beatae libero at! Natus dolor vitae veritatis nobis asperiores assumenda. Voluptatem, quibusdam. Laudantium, cupiditate.
-                        <br />
-
-                        <b>Pilihan Warna: </b> {product.color} <br />
-
                         <b>Spesifikasi:</b> <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ipsam magnam ea quas ipsum assumenda, nemo sit, eaque non placeat sunt aliquid quaerat debitis architecto. Deserunt ipsum nam officiis unde.
+                        
                     </p>
-                    <div className="d-flex justify-content-end">
+                    <ul>
+                            {product.deskripsi.map((desc, index) => {
+                                return(
+                                    <li key={"deskripsi" + product.id + index}>
+                                        {desc}
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    <div>
                         <button className="btn btn-outline-dark text-right" onClick={() => { props.addToCart(product.id, 1) }}>Add to Cart</button>
                     </div>
 

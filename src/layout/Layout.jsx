@@ -5,7 +5,7 @@ class Layout extends React.Component {
   render() {
     return (
       <main>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
           {/* <div className="container px-4 px-lg-5">
             <Link to="/" className="navbar-brand">
               Laptopu &#128187;

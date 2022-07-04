@@ -46,3 +46,7 @@ body {
 .text-danger{
   color: #e73119 !important;
 }
+
+.bg-red{
+  background-color: #e73119;
+}
