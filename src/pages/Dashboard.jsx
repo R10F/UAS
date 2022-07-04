@@ -43,6 +43,7 @@ class Dashboard extends React.Component {
       confirmButtonText: "Yes, logout!",
     }).then((result) => {
       if (result.isConfirmed) {
+        localStorage.setItem("laptopuLogin", false);
         window.location.replace('/');
       }
     });
@@ -114,6 +115,13 @@ class Dashboard extends React.Component {
         </div>
       </div>
     );
+  }
+
+  componentWillMount() {
+    const isLogin = localStorage.getItem("laptopuLogin");
+    if (isLogin === null || isLogin === 'false') {
+      window.location.replace('/admin');
+    }
   }
 }
 

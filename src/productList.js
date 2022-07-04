@@ -3,34 +3,37 @@ const productList = [
     id: 1,
     src: require("./assets/img/card/card1.png"),
     nama: "ROG Zephyrus Duo (2022)",
-    harga: "59.999.000",
+    harga: "59999000",
     rating: 4,
     color: "Hitam, Putih",
-    isSales: true
+    isSales: true,
+    salePrice: "69"
   },
   {
     id: 2,
     src: require("./assets/img/card/card2.png"),
     nama: "ROG Strix Scar 17 (2022)",
-    harga: "46.408.000",
+    harga: "46408000",
     rating: 5,
     color: "Hitam, Putih, Biru",
-    isSales: true
+    isSales: true,
+    salePrice: "69"
   },
   {
     id: 3,
     src: require("./assets/img/card/card3.png"),
     nama: "ROG Zephyrus M16 (2022)",
-    harga: "44.389.900",
+    harga: "44389900",
     rating: null,
     color: "Hitam, Putih",
-    isSales: true
+    isSales: true,
+    salePrice: "69"
   },
   {
     id: 4,
     src: require("./assets/img/card/card2.png"),
     nama: "ROG Strix Scar 15 (2022)",
-    harga: "34.298.991",
+    harga: "34298991",
     rating: 3,
     color: "Hitam, Merah",
     isSales: false
@@ -39,7 +42,7 @@ const productList = [
     id: 5,
     src: require("./assets/img/card/card4.png"),
     nama: "ASUS TUF Gaming F15 (2022)",
-    harga: "23.499.000",
+    harga: "23499000",
     rating: 4,
     color: "Hitam, Silver",
     isSales: false
@@ -48,7 +51,7 @@ const productList = [
     id: 6,
     src: require("./assets/img/card/card5.png"),
     nama: "2021 ASUS TUF Dash F15",
-    harga: "18.999.000 ",
+    harga: "18999000 ",
     rating: 5,
     color: "Hitam, Putih",
     isSales: false

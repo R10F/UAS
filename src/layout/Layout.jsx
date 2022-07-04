@@ -18,12 +18,12 @@ class Layout extends React.Component {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                 <li className="nav-item">
-                  <NavLink to="/" className="nav-link" aria-current="page" href="#!">
+                  <NavLink to="/" className="nav-link">
                     Home
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="/catalog" className="dropdown-item nav-link">
+                  <NavLink to="/catalog" className="nav-link">
                     All Products
                   </NavLink>
                 </li>

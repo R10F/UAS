@@ -10,6 +10,9 @@ class SalesProduct extends React.Component {
   };
 
   render() {
+    let harga = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(this.props.product.harga);
+    let salesPrice = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(this.props.product.salePrice);
+
     return (
       <div className="col mb-5" data-aos="flip-right" data-aos-duration="2500">
         <div className="card h-100">
@@ -22,10 +25,10 @@ class SalesProduct extends React.Component {
           <div className="card-body p-4">
             <div className="text-center">
               <h5 className="fw-bolder">{this.props.product.nama}</h5>
-              <span className="fs-5 text-danger">{this.props.product.harga}</span>
+              <span className="fs-5 text-danger">{salesPrice}</span>
               <br />
               <span className="text-muted text-decoration-line-through">
-                <small>{this.props.product.harga}</small>
+                <small>{harga}</small>
               </span>
             </div>
           </div>
