@@ -15,7 +15,7 @@ class Login extends React.Component {
 
     if (username === "admin" && password === "admin") {
       localStorage.setItem("laptopuLogin", true);
-      window.location.replace('/admin/dashboard');
+      window.location.replace("/admin/dashboard");
     } else {
       this.setState({ showAlert: true });
     }
@@ -35,7 +35,7 @@ class Login extends React.Component {
                         <h3 class="text-center font-weight-light my-4">Login</h3>
                       </div>
                       <div class="card-body">
-                        <div class={"alert alert-danger " + (this.state.showAlert ? '' : 'd-none')} role="alert">
+                        <div class={"alert alert-danger " + (this.state.showAlert ? "" : "d-none")} role="alert">
                           Incorrect username or password, you're not admin!
                         </div>
 
@@ -49,7 +49,9 @@ class Login extends React.Component {
                             <label for="inputPassword">Password</label>
                           </div>
                           <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="submit" class="btn btn-primary">
+                              Login
+                            </button>
                           </div>
                         </form>
                       </div>
@@ -70,8 +72,8 @@ class Login extends React.Component {
   }
 
   componentWillMount() {
-    if (localStorage.getItem("laptopuLogin") === 'true') {
-      window.location.replace('/admin/dashboard');
+    if (localStorage.getItem("laptopuLogin") === "true") {
+      window.location.replace("/admin/dashboard");
     }
   }
 }

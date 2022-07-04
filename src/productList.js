@@ -7,7 +7,7 @@ const productList = [
     rating: 4,
     color: "Hitam, Putih",
     isSales: true,
-    salePrice: "69",
+    salePrice: "58999000",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const productList = [
     rating: 5,
     color: "Hitam, Putih, Biru",
     isSales: true,
-    salePrice: "69",
+    salePrice: "45408082",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const productList = [
     rating: null,
     color: "Hitam, Putih",
     isSales: true,
-    salePrice: "69",
+    salePrice: "43389900",
   },
   {
     id: 4,

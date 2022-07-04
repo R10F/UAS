@@ -6,12 +6,10 @@ class Layout extends React.Component {
     return (
       <main>
         <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-          {/* <div className="container px-4 px-lg-5">
-            <Link to="/" className="navbar-brand">
-              Laptopu &#128187;
-            </Link> */}
-          <div className="container px-2 px-lg-3">
-            <img src={require("../assets/img/laptopu2.png")} width="300px" alt="LaptopU Logo" />
+          <div className="container-fluid px-2 px-lg-3 mx-3">
+            <NavLink to="/">
+              <img src={require("../assets/img/laptopu2.png")} width="200px" alt="LaptopU Logo" />
+            </NavLink>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -40,9 +38,11 @@ class Layout extends React.Component {
         </nav>
         <Outlet />
 
-        <footer className="py-5 bg-dark ">
-          <div className="container ">
-            <p className="m-0 text-center text-white">Copyright &copy; Team Apple 2022</p>
+        <footer class="py-4 bg-dark mt-auto">
+          <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-center small">
+              <div class="text-white">Copyright &copy; Team Apple 2022</div>
+            </div>
           </div>
         </footer>
       </main>

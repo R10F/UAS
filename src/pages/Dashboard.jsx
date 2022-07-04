@@ -7,7 +7,8 @@ import { FcSalesPerformance } from "react-icons/fc";
 import { BsCart4 } from "react-icons/bs";
 import Footer from "../components/admin/Footer";
 import ProductItem from "../components/admin/ProductItem";
-
+import { NavLink } from "react-router-dom";
+import Aos from "aos";
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +28,7 @@ class Dashboard extends React.Component {
           pointHoverBackgroundColor: "rgba(2,117,216,1)",
           pointHitRadius: 50,
           pointBorderWidth: 2,
-          data: Array.from({ length: 12 }, () => parseInt(Math.random() * 50000))
+          data: Array.from({ length: 12 }, () => parseInt(Math.random() * 50000)),
         },
       ],
     };
@@ -44,25 +45,33 @@ class Dashboard extends React.Component {
     }).then((result) => {
       if (result.isConfirmed) {
         localStorage.setItem("laptopuLogin", false);
-        window.location.replace('/');
+        window.location.replace("/");
       }
     });
-  }
+  };
 
   render() {
+    Aos.init();
     return (
       <div class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark justify-content-between">
-          <div className="container">
-            <Link to="/" className="navbar-brand ps-3">Apple Tech</Link>
-            <button className="btn btn-outline-danger" onClick={this.logout}>Logout</button>
+        <nav className="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+          <div className="container-fluid px-2 px-lg-3 mx-3">
+            <NavLink to="/">
+              <img src={require("../assets/img/laptopu2.png")} width="200px" alt="LaptopU Logo" />
+            </NavLink>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <button className="btn btn-outline-danger" onClick={this.logout}>
+              Logout
+            </button>
           </div>
         </nav>
 
         <div id="layoutSidenav" className="container pb-5">
           <div id="layoutSidenav_content" class="ps-lg-0">
             <main>
-              <div class="container-fluid px-4">
+              <div class="container-fluid px-4" data-aos="zoom-out-down" data-aos-duration="1500">
                 <h1 class="text-center mt-4 mb-5">Dashboard</h1>
 
                 <div class="card mb-5">
@@ -76,7 +85,7 @@ class Dashboard extends React.Component {
                   <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
                 </div>
 
-                <div class="card mb-4">
+                <div class="card mb-4" data-aos="fade-down" data-aos-duration="2000" data-aos-offset="300">
                   <div class="card-header text-center">
                     <BsCart4 className="me-1" />
                     Product List
@@ -94,13 +103,9 @@ class Dashboard extends React.Component {
                         </tr>
                       </thead>
                       <tbody>
-                        {
-                          this.props.products.map(product => {
-                            return (
-                              <ProductItem product={product} editProduct={this.props.editProduct} />
-                            );
-                          })
-                        }
+                        {this.props.products.map((product) => {
+                          return <ProductItem product={product} editProduct={this.props.editProduct} />;
+                        })}
                       </tbody>
                     </table>
                   </div>
@@ -119,8 +124,8 @@ class Dashboard extends React.Component {
 
   componentWillMount() {
     const isLogin = localStorage.getItem("laptopuLogin");
-    if (isLogin === null || isLogin === 'false') {
-      window.location.replace('/admin');
+    if (isLogin === null || isLogin === "false") {
+      window.location.replace("/admin");
     }
   }
 }

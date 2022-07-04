@@ -37,7 +37,9 @@ class About extends React.Component {
 
               <div className="col teks" data-aos="zoom-in-down" data-aos-duration="1000">
                 <p className="text-justify">
-                  <strong className="text-danger">Laptopu </strong> merupakan salah satu toko e-commerce terbesar dan terpercaya yang berfokus pada penjualan laptop gaming. Berdiri sejak tahun 2000, awalnya Laptopu menjual segala peralatan komputer seperti monitor, mouse, dan keyboard. Namun, dalam kurun waktu 5 tahun terakhir, Laptopu menspesifikasikan diri menjadi distributor laptop gaming. Peralihan ini tentu tidak semudah membalikkan telapak tangan. Banyaknya rintangan yang dihadapi oleh Laptopu tidak membuat semangat kami surut. Di tahun 2022 ini, Laptopu mampu mengukuhkan namanya sebagai salah satu e-commerce terbesar di Indonesia.
+                  <strong className="text-danger">Laptopu </strong> merupakan salah satu toko e-commerce terbesar dan terpercaya yang berfokus pada penjualan laptop gaming. Berdiri sejak tahun 2000, awalnya Laptopu menjual segala peralatan
+                  komputer seperti monitor, mouse, dan keyboard. Namun, dalam kurun waktu 5 tahun terakhir, Laptopu menspesifikasikan diri menjadi distributor laptop gaming. Peralihan ini tentu tidak semudah membalikkan telapak tangan.
+                  Banyaknya rintangan yang dihadapi oleh Laptopu tidak membuat semangat kami surut. Di tahun 2022 ini, Laptopu mampu mengukuhkan namanya sebagai salah satu e-commerce terbesar di Indonesia.
                   <br />
                   <br />
                   Ingin mengenal kami lebih jauh? Silakan menghubungi kami dengan mengisi form di bawah
@@ -69,7 +71,7 @@ class About extends React.Component {
                     <label htmlFor="floatingTextarea">Message</label>
                   </div>
 
-                  <div className="d-grid gap-2 mb-lg-4 mt-lg-4">
+                  <div className="d-grid gap-2 mt-2 mb-5">
                     <button className="btn btn-primary" type="button" onClick={this.submit}>
                       Submit
                     </button>
