@@ -8,14 +8,15 @@ class ProductItem extends React.Component {
   editProduct = (e) => {
     e.preventDefault();
 
-    const input = e.target.getElementsByClassName("form-control"); console.log(input[3].value);
+    const input = e.target.getElementsByClassName("form-control");
+    console.log(input[3].value);
 
     this.props.editProduct(this.props.product.id, {
       name: input[0].value,
       price: input[1].value,
       color: input[2].value,
       salePrice: input[3].value,
-      isSales: e.target.querySelector(".form-check-input").checked
+      isSales: e.target.querySelector(".form-check-input").checked,
     });
   };
 
@@ -35,7 +36,7 @@ class ProductItem extends React.Component {
           <button className="btn btn-warning" data-bs-toggle="modal" data-bs-target={"#editProductModal-" + this.props.product.id}>
             Edit
           </button>
-          
+
           <div className="modal fade" id={"editProductModal-" + this.props.product.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-lg">
               <div className="modal-content">
@@ -59,7 +60,7 @@ class ProductItem extends React.Component {
                       Price
                     </label>
                     <div className="input-group mb-4">
-                      <span class="input-group-text" id="basic-addon1">
+                      <span className="input-group-text" id="basic-addon1">
                         Rp
                       </span>
                       <input type="text" className="form-control" id={"editProductModalInput-2" + this.props.product.id} defaultValue={this.props.product.harga} />
@@ -72,9 +73,11 @@ class ProductItem extends React.Component {
                       <input type="text" className="form-control" id={"editProductModalInput-3" + this.props.product.id} defaultValue={this.props.product.color} />
                     </div>
 
-                    <div class="form-check form-switch mb-4">
-                      <input class="form-check-input" type="checkbox" role="switch" id={"editProductModalInput-4" + this.props.product.id} defaultChecked={this.props.product.isSales} />
-                      <label class="form-check-label" for={"editProductModalInput-4" + this.props.product.id}>Sale</label>
+                    <div className="form-check form-switch mb-4">
+                      <input className="form-check-input" type="checkbox" role="switch" id={"editProductModalInput-4" + this.props.product.id} defaultChecked={this.props.product.isSales} />
+                      <label className="form-check-label" for={"editProductModalInput-4" + this.props.product.id}>
+                        Sale
+                      </label>
                     </div>
 
                     <label htmlFor={"editProductModalInput-5" + this.props.product.id} className="form-label">
