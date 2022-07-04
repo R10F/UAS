@@ -69,28 +69,28 @@ class Dashboard extends React.Component {
         </nav>
 
         <div id="layoutSidenav" className="container pb-5">
-          <div id="layoutSidenav_content" class="ps-lg-0">
+          <div id="layoutSidenav_content" className="ps-lg-0">
             <main>
-              <div class="container-fluid px-4" data-aos="zoom-out-down" data-aos-duration="1500">
-                <h1 class="text-center mt-4 mb-5">Dashboard</h1>
+              <div className="container-fluid px-4" data-aos="zoom-out-down" data-aos-duration="1500">
+                <h1 className="text-center mt-4 mb-5">Dashboard</h1>
 
-                <div class="card mb-5">
-                  <div class="card-header text-center">
+                <div className="card mb-5">
+                  <div className="card-header text-center">
                     <FcSalesPerformance className="me-1" />
                     Sales Chart
                   </div>
-                  <div class="card-body">
+                  <div className="card-body">
                     <Chart type="line" data={this.chartData} width={600} height={200} />
                   </div>
-                  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                  <div className="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
                 </div>
 
-                <div class="card mb-4" data-aos="fade-down" data-aos-duration="2000" data-aos-offset="300">
-                  <div class="card-header text-center">
+                <div className="card mb-4" data-aos="fade-down" data-aos-duration="2000" data-aos-offset="300">
+                  <div className="card-header text-center">
                     <BsCart4 className="me-1" />
                     Product List
                   </div>
-                  <div class="card-body">
+                  <div className="card-body">
                     <table className="table text-center align-middle">
                       <thead>
                         <tr>

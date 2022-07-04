@@ -72,7 +72,6 @@ class App extends React.Component {
   };
 
   render() {
-    console.warn("render method");
     return (
       // --------routing msh blm pasti ya ges. nnti klo perlu, sesuaiin ajaa -er
       <Routes>

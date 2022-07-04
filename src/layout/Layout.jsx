@@ -38,10 +38,10 @@ class Layout extends React.Component {
         </nav>
         <Outlet />
 
-        <footer class="py-4 bg-dark mt-auto">
-          <div class="container-fluid px-4">
-            <div class="d-flex align-items-center justify-content-center small">
-              <div class="text-white">Copyright &copy; Team Apple 2022</div>
+        <footer className="py-4 bg-dark mt-auto">
+          <div className="container-fluid px-4">
+            <div className="d-flex align-items-center justify-content-center small">
+              <div className="text-white">Copyright &copy; Team Apple 2022</div>
             </div>
           </div>
         </footer>
