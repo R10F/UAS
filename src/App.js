@@ -70,8 +70,16 @@ class App extends React.Component {
     localStorage.setItem("laptop", JSON.stringify(nextState.cartItems));
   }
 
+  componentDidUpdate() {
+    let data = JSON.parse(localStorage.getItem("laptop"));
+    let key = data.keys();
+
+    for (const keys of key) {
+      console.log("jumlah", JSON.parse(localStorage.getItem("laptop"))[keys]["qty"]);
+    }
+  }
+
   render() {
-    console.warn("render method");
     return (
       // --------routing msh blm pasti ya ges. nnti klo perlu, sesuaiin ajaa -er
       <Routes>

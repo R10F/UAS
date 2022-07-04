@@ -6,7 +6,7 @@ const productList = [
     harga: "59.999.000",
     rating: 4,
     color: "Hitam, Putih",
-    isSales: true
+    isSales: true,
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const productList = [
     harga: "46.408.000",
     rating: 5,
     color: "Hitam, Putih, Biru",
-    isSales: true
+    isSales: true,
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const productList = [
     harga: "44.389.900",
     rating: null,
     color: "Hitam, Putih",
-    isSales: true
+    isSales: true,
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const productList = [
     harga: "34.298.991",
     rating: 3,
     color: "Hitam, Merah",
-    isSales: false
+    isSales: false,
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const productList = [
     harga: "23.499.000",
     rating: 4,
     color: "Hitam, Silver",
-    isSales: false
+    isSales: false,
   },
   {
     id: 6,
@@ -51,8 +51,8 @@ const productList = [
     harga: "18.999.000 ",
     rating: 5,
     color: "Hitam, Putih",
-    isSales: false
-  }
+    isSales: false,
+  },
 ];
 
 export default productList;
