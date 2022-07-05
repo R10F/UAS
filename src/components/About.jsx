@@ -24,20 +24,18 @@ class About extends React.Component {
   };
 
   render() {
-    Aos.init({
-      once: true,
-    });
+    Aos.init();
 
     return (
       <Fragment>
         <section>
           <div className="container">
             <div className="row" style={{ marginBottom: "5rem" }}>
-              <h1 className="text-center my-3 text-teal" data-aos="fade-down" data-aos-duration="1500">
+              <h1 className="text-center my-3 text-blue" data-aos="fade-down">
                 ABOUT US
               </h1>
 
-              <div className="col teks" data-aos="zoom-in-down" data-aos-duration="2000">
+              <div className="col teks" data-aos="zoom-in-down" data-aos-duration="1000">
                 <p className="text-justify">
                   <strong className="text-danger">Laptopu </strong> merupakan salah satu toko e-commerce terbesar dan terpercaya yang berfokus pada penjualan laptop gaming. Berdiri sejak tahun 2000, awalnya Laptopu menjual segala peralatan
                   komputer seperti monitor, mouse, dan keyboard. Namun, dalam kurun waktu 5 tahun terakhir, Laptopu menspesifikasikan diri menjadi distributor laptop gaming. Peralihan ini tentu tidak semudah membalikkan telapak tangan.
@@ -50,7 +48,7 @@ class About extends React.Component {
             </div>
 
             <div className="row">
-              <h1 className="text-center mt-3 mb-4 text-teal judul" data-aos="fade-down" data-aos-duration="2000">
+              <h1 className="text-center mt-3 mb-4 text-blue judul" data-aos="fade-down" data-aos-duration="2000">
                 CONTACT US
               </h1>
             </div>

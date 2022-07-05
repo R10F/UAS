@@ -14,13 +14,15 @@ class Cart extends React.Component {
   payment = () => {
     if (this.props.cartTotal <= 0) {
       Swal.fire({
-        icon: "danger",
-        html: "Your cart is still empty!",
+        icon: "warning",
+        text: "Your cart is still empty!",
+        confirmButtonColor: "#3085d6"
       });
     } else {
       Swal.fire({
         icon: "success",
         text: "Thanks For Shopping! ",
+        confirmButtonColor: "#3085d6"
       });
       this.props.payment();
     }
@@ -29,7 +31,9 @@ class Cart extends React.Component {
   discountNotApplied = () => {
     Swal.fire({
       icon: "error",
-      html: "Oops, Wrong Discount Code!<br>Make sure you spell it correctly.",
+      title: "Oops...",
+      html: "Wrong Discount Code!<br>Make sure you spell it correctly.",
+      confirmButtonColor: "#3085d6",
     });
   };
   applyCode = (e) => {
@@ -50,7 +54,7 @@ class Cart extends React.Component {
 
     return (
       <>
-        <section className="container h-100 py-5">
+        <article className="container h-100 py-5">
           <div className="row d-flex justify-content-center align-items-center h-100 p-2">
             <div className="d-flex justify-content-between align-items-center mb-4">
               <h3 className="fw-normal mb-0 text-black">Shopping Cart</h3>
@@ -66,7 +70,7 @@ class Cart extends React.Component {
             ) : (
               <>
                 {allcartitem}
-                <div className="card mb-4 bg-teal">
+                <section className="card mb-4 bg-teal">
                   <div className="card-body p-4">
                     <div className="d-flex">
                       {this.props.appliedCode ? (
@@ -92,14 +96,14 @@ class Cart extends React.Component {
                       </button>
                     </form>
                   </div>
-                </div>
+                </section>
                 <button type="button" className="btn btn-success btn-lg" onClick={this.payment}>
                   Proceed to Pay
                 </button>
               </>
             )}
           </div>
-        </section>
+        </article>
       </>
     );
   }

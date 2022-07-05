@@ -41,19 +41,28 @@ body {
 #demo {
   font-size: 25px;
   font-family: "Fraunces", cursive;
-  color: #01768a;
+  color: #01768a !important;
 }
 
 .text-teal {
   color: #90b5ae;
 }
-
+.text-blue{
+  color: #01768a !important;
+}
 .text-danger {
   color: #e73119 !important;
 }
 
 .bg-red {
   background-color: #e73119;
+}
+.btn-apricot{
+  color: #edb081 !important;
+  border-color: #edb081 !important;
+}
+.btn-apricot:hover{
+  background-color: #04486b !important;
 }
 
 /* Admin Area */

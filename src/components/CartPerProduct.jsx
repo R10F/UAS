@@ -32,7 +32,7 @@ class CartPerProduct extends React.Component {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire("Deleted!", "Your Cart Has Been Deleted.", "success");
+        Swal.fire("Deleted!", "This product has been deleted from your cart.", "success");
 
         this.props.deleteFromCart(this.props.productDetail.id);
       }
@@ -42,7 +42,7 @@ class CartPerProduct extends React.Component {
   render() {
     let harga = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(this.props.productDetail.harga * this.props.productDetail.qty);
     return (
-      <div className="card rounded-3 mb-4">
+      <section className="card rounded-3 mb-4">
         <div className="card-body p-4">
           <div className="row d-flex justify-content-between align-items-center">
             <div className="col-md-2">
@@ -105,7 +105,7 @@ class CartPerProduct extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
