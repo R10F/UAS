@@ -12,10 +12,20 @@ class Cart extends React.Component {
     };
   }
   payment = () => {
-    Swal.fire({
-      icon: "success",
-      text: "Thanks For Shopping! ",
-    });
+    if (this.props.cartTotal <= 0){
+      Swal.fire({
+        icon: "danger",
+        html: "Your cart is still empty!",
+      });
+    }
+    else{
+      Swal.fire({
+        icon: "success",
+        text: "Thanks For Shopping! ",
+      });
+      this.props.payment();
+    }
+    
   };
 
   discountNotApplied = () => {
@@ -79,7 +89,7 @@ class Cart extends React.Component {
                       }
                     </div>
                     <form className="d-flex flex-row" onSubmit={this.applyCode}>
-                      <input type="text" id="discount" name="discount" className="form-control form-control-lg" placeholder="Discount Code" />
+                      <input type="text" id="discount" name="discount" className="form-control form-control-lg" placeholder="Discount Code"/>
                       <button type="submit" className="btn btn-outline-dark btn-lg ms-3" >Apply</button>
                     </form>
                   </div>
