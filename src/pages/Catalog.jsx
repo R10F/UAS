@@ -5,7 +5,6 @@ class Catalog extends React.Component {
   constructor(props) {
     super(props);
     this.products = this.props.products;
-    // this.products = getAllProducts();
   }
 
   render() {

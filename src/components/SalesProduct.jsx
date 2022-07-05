@@ -2,10 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 class SalesProduct extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   addToCart = () => {
     this.props.addToCart(this.props.product.id, 1);
   };
@@ -28,7 +24,7 @@ class SalesProduct extends React.Component {
               <Link to={`/catalog/${this.props.product.id}`} className="text-decoration-none text-dark">
                 <h5 className="fw-bolder">{this.props.product.nama}</h5>
               </Link>
-              <span className="fs-5 text-danger">{new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(this.props.product.salePrice)}</span>
+              <span className="fs-5 text-danger">{salesPrice}</span>
               <br />
               <span className="text-muted text-decoration-line-through">
                 <small>{harga}</small>

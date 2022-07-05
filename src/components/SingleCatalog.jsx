@@ -2,15 +2,15 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Star from "../components/Star";
 import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function SingleCatalog(props) {
   let params = useParams();
-  // let product = getProduct(parseInt(params.productId, 10));
   let product = props.getProduct(parseInt(params.productId, 10));
-  Aos.init({});
+  Aos.init();
 
   return (
-    <section className="container-fluid p-5">
+    <section className="container-fluid p-5" data-aos="zoom-out-down" data-aos-duration="2000" data-aos-once="true">
       <div className="row  ">
         <div className="col-lg-5">
           <div className="card">

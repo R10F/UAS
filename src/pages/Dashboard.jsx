@@ -1,5 +1,5 @@
+import React from "react";
 import Swal from "sweetalert2";
-import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { Chart as ChartJS } from "chart.js/auto";
 import { Chart } from "react-chartjs-2";
@@ -43,7 +43,6 @@ class Dashboard extends React.Component {
       confirmButtonText: "Yes, logout!",
     }).then((result) => {
       if (result.isConfirmed) {
-        localStorage.setItem("laptopuLogin", false);
         window.location.replace("/");
       }
     });
@@ -51,23 +50,20 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-      <Fragment>
-        <nav className="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+      <div className="sb-nav-fixed">
+        <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark justify-content-between">
           <div className="container-fluid px-2 px-lg-3 mx-3">
             <Link to="/">
               <img src={require("../assets/img/laptopu2.png")} width="200px" alt="LaptopU Logo" />
             </Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
             <button className="btn btn-outline-danger" onClick={this.logout}>
               Logout
             </button>
           </div>
         </nav>
 
-        <div className="container pb-5">
-          <div className="ps-lg-0">
+        <div id="layoutSidenav" className="container pb-5">
+          <div id="layoutSidenav_content" class="ps-lg-0">
             <main>
               <div className="container-fluid px-4">
                 <h1 className="text-center mt-4 mb-5">Dashboard</h1>
@@ -116,15 +112,8 @@ class Dashboard extends React.Component {
         <div className="mt-5">
           <Footer />
         </div>
-      </Fragment>
+      </div>
     );
-  }
-
-  componentWillMount() {
-    const isLogin = localStorage.getItem("laptopuLogin");
-    if (isLogin === null || isLogin === "false") {
-      window.location.replace("/admin");
-    }
   }
 }
 

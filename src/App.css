@@ -41,10 +41,11 @@ body {
 #demo {
   font-size: 25px;
   font-family: "Fraunces", cursive;
+  color: #01768a;
 }
 
 .text-teal {
-  color: #90B5ae;
+  color: #90b5ae;
 }
 
 .text-danger {
@@ -54,8 +55,6 @@ body {
 .bg-red {
   background-color: #e73119;
 }
-
-
 
 /* Admin Area */
 #layoutAuthentication {

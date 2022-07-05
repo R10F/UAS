@@ -54,17 +54,12 @@ class Cart extends React.Component {
           <div className="row d-flex justify-content-center align-items-center h-100 p-2">
             <div className="d-flex justify-content-between align-items-center mb-4">
               <h3 className="fw-normal mb-0 text-black">Shopping Cart</h3>
-              {/* <div>
-                <p className="mb-0"><span className="text-muted">Sort by:</span> <a href="#!" className="text-body">price <i
-                      className="fas fa-angle-down mt-1"></i></a></p>
-              </div> */}
             </div>
 
             {this.props.cartItems.length === 0 ? (
               <div className="alert alert-warning">
                 Oops, shopping cart is empty!
                 <Link to="/catalog" className="text-success" style={{ fontWeight: 500 }}>
-                  {" "}
                   Add something to your cart !
                 </Link>
               </div>
@@ -81,7 +76,6 @@ class Cart extends React.Component {
                             <small className="text-muted text-decoration-line-through fs-6"> {new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(this.props.cartTotal)}</small>
                           </p>
                           <p className="ms-4 text-success shadow-sm p-2">
-                            {" "}
                             <FiAward /> Discount applied
                           </p>
                         </>

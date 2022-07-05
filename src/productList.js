@@ -13,10 +13,10 @@ const productList = [
       "Windows 11 Home",
       "AMD Ryzen™ 9 6900HX",
       "ROG Nebula HDR Display, 16 inch, QHD+ 16:10 (2560 x 1600, WQXGA), Refresh Rate:165Hz",
-      "Additional Display: 14\" 3840 x 1100(4K) IPS-level Panel",
+      'Additional Display: 14" 3840 x 1100(4K) IPS-level Panel',
       "1TB PCIe® 4.0 NVMe™ M.2 Performance SSD",
-      "T/A, 16GB DDR5-4800 SO-DIMM x 2"
-    ]
+      "T/A, 16GB DDR5-4800 SO-DIMM x 2",
+    ],
   },
   {
     id: 2,
@@ -33,8 +33,8 @@ const productList = [
       "12th Gen Intel® Core™ i9-12900H",
       ", 17.3 inch, WQHD (2560 x 1440) 16:9, Refresh Rate:240Hz",
       "1TB PCIe® 4.0 NVMe™ M.2 Performance SSD",
-      "T/A, 16GB DDR5-4800 SO-DIMM x 2"
-    ]
+      "T/A, 16GB DDR5-4800 SO-DIMM x 2",
+    ],
   },
   {
     id: 3,
@@ -51,8 +51,8 @@ const productList = [
       "12th Gen Intel® Core™ i9-12900H",
       "ROG Nebula Display, 16 inch, QHD+ 16:10 (2560 x 1600, WQXGA), Refresh Rate:165Hz",
       "1TB PCIe® 4.0 NVMe™ M.2 Performance SSD",
-      "16GB DDR5 on board"
-    ]
+      "16GB DDR5 on board",
+    ],
   },
   {
     id: 4,
@@ -68,8 +68,8 @@ const productList = [
       "12th Gen Intel® Core™ i9-12900H",
       ", 15.6 inch, WQHD (2560 x 1440) 16:9, Refresh Rate:240Hz",
       "1TB PCIe® 4.0 NVMe™ M.2 Performance SSD",
-      "T/A, 16GB DDR5-4800 SO-DIMM x 2"
-    ]
+      "T/A, 16GB DDR5-4800 SO-DIMM x 2",
+    ],
   },
   {
     id: 5,
@@ -79,15 +79,7 @@ const productList = [
     rating: 4,
     color: "Hitam, Silver",
     isSales: false,
-    deskripsi: [
-      "Windows 11 Home",
-      "Up to GeForce RTX™ 3070 Laptop GPU",
-      "Intel® Core™ i7-12700H Processor",
-      "MUX Switch",
-      "Up to 15.6” QHD 165Hz 100% DCI-P3 Display",
-      "Arc Flow Fans™",
-      "MIL-STD-810H Standards"
-    ]
+    deskripsi: ["Windows 11 Home", "Up to GeForce RTX™ 3070 Laptop GPU", "Intel® Core™ i7-12700H Processor", "MUX Switch", "Up to 15.6” QHD 165Hz 100% DCI-P3 Display", "Arc Flow Fans™", "MIL-STD-810H Standards"],
   },
   {
     id: 6,
@@ -102,9 +94,9 @@ const productList = [
       "Up to GeForce RTX™ 3070",
       "Up to 11th Gen Intel® Core™ i7",
       "Up to 15.6” FHD 240Hz/3ms 100% sRGB",
-      "Thunderbolt 4 Support"
-    ]
-  }
+      "Thunderbolt 4 Support",
+    ],
+  },
 ];
 
 export default productList;
