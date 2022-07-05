@@ -1,4 +1,5 @@
 import React from "react";
+import Swal from "sweetalert2";
 import { FiPlus, FiMinus, FiTrash2 } from "react-icons/fi"
 import { Link } from "react-router-dom";
 
@@ -20,6 +21,24 @@ class CartPerProduct extends React.Component {
     this.setState({ qty: e.target.value });
     this.props.addToCart(this.props.productDetail.id, newQty - this.props.productDetail.qty);
   }
+  deleteFromCart = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+
+        this.props.deleteFromCart(this.props.productDetail.id);
+      }
+    });
+  };
+
   render() {
     let harga = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(this.props.productDetail.harga * this.props.productDetail.qty);
     return (
@@ -72,7 +91,7 @@ class CartPerProduct extends React.Component {
               }
             </div>
             <div className="text-end col-md-1">
-              <button className="btn text-danger fs-5" onClick={() => this.props.deleteFromCart(this.props.productDetail.id)}>
+              <button className="btn text-danger fs-5" onClick={this.deleteFromCart}>
                 <FiTrash2 />
               </button>
             </div>

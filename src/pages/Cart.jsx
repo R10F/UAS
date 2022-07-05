@@ -50,7 +50,7 @@ class Cart extends React.Component {
                   </div>
 
                 </div>
-                <button type="button" className="btn btn-success btn-lg">Proceed to Pay</button>
+                <button type="button" className="btn btn-success btn-lg" onClick={this.payment}>Proceed to Pay</button>
               </>}
           </div>
         </section>
