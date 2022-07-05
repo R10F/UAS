@@ -80,7 +80,7 @@ class CartPerProduct extends React.Component {
             </div>
 
             <div className="col-md-3 offset-lg-1 d-flex flex-column">
-              {this.props.productDetail.beforeSale ?
+              {this.props.productDetail.beforeSale !== this.props.productDetail.harga ?
                 <>
                   <p className="fs-4 text-danger mb-0">
                     {harga}

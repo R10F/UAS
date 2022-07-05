@@ -18,7 +18,8 @@ class App extends React.Component {
       products: productList,
       cartItems: [],
       cartQty: 0,
-      cartTotal: 0
+      cartTotal: 0,
+      appliedCode: false
     }
   }
 
@@ -36,7 +37,7 @@ class App extends React.Component {
     if (index === -1) {
       let product = this.getProduct(parseInt(id, 10));
       let hargaproduk;
-      if (product.isSales) { hargaproduk = product.salePrice } else { hargaproduk = product.hargaProduk };
+      if (product.isSales) { hargaproduk = product.salePrice } else { hargaproduk = product.harga };
       let addedProduct = {
         id: product.id,
         src: product.src,
@@ -77,6 +78,9 @@ class App extends React.Component {
     return this.state.products.find((product) => product.id === id);
   };
 
+  applyCode = (valid) => {
+    this.setState({appliedCode : valid});
+  } 
   editProduct = (id, updatedProduct) => {
     let productList = this.state.products;
     const index = productList.findIndex((product) => product.id === id);
@@ -98,7 +102,7 @@ class App extends React.Component {
           <Route index element={<Home products={this.state.products} addToCart={this.addToCart} />} />
           <Route path="/catalog" element={<Catalog products={this.state.products} addToCart={this.addToCart} />} />
           <Route path="/catalog/:productId" element={<SingleCatalog getProduct={this.getProduct} addToCart={this.addToCart} />} />
-          <Route path="/cart" element={<Cart addToCart={this.addToCart} deleteFromCart={this.deleteFromCart} cartItems={this.state.cartItems} cartQty={this.state.cartQty} cartTotal={this.state.cartTotal} />} />
+          <Route path="/cart" element={<Cart addToCart={this.addToCart} deleteFromCart={this.deleteFromCart} applyCode={this.applyCode} cartItems={this.state.cartItems} cartQty={this.state.cartQty} cartTotal={this.state.cartTotal} appliedCode={this.state.appliedCode}/>} />
         </Route>
 
         <Route path="/admin" element={<Login />} />
