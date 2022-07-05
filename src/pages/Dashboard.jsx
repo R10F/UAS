@@ -55,7 +55,7 @@ class Dashboard extends React.Component {
         <nav className="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
           <div className="container-fluid px-2 px-lg-3 mx-3">
             <Link to="/">
-              <img src={require("../assets/img/laptopu2.png")} width="200px" alt="LaptopU Logo" />
+              <img src={require("../assets/img/laptopu.png")} width="200px" alt="LaptopU Logo" />
             </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
