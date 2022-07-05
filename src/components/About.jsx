@@ -31,7 +31,7 @@ class About extends React.Component {
         <header>
           <div className="container">
             <div className="row">
-              <h1 className="text-center my-3 text-teal" data-aos="fade-down">
+              <h1 className="text-center my-3 text-teal" data-aos="fade-down" data-aos-offset="100">
                 ABOUT US
               </h1>
 
@@ -51,11 +51,12 @@ class About extends React.Component {
                 CONTACT US
               </h1>
             </div>
+
             <div className="row justify-content-center">
               <div className="col-md-6">
                 <form className="needs-validation" data-aos="zoom-out-down" data-aos-duration="1200">
                   <div className="form-floating mb-3">
-                    <input type="text" className="form-control" id="floatingInput" placeholder="Input Your Name" required />
+                    <input type="text" className="form-control " id="floatingInput" placeholder="Input Your Name" required />
                     <label htmlFor="floatingInput">Name </label>
                   </div>
                   <div className="form-floating mb-3">
