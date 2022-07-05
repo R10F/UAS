@@ -10,7 +10,7 @@ export default function SingleCatalog(props) {
   Aos.init();
 
   return (
-    <section className="container-fluid p-5" data-aos="zoom-out-down" data-aos-duration="2000" data-aos-once="true">
+    <section className="container-fluid p-5">
       <div className="row  ">
         <div className="col-lg-5">
           <div className="card">

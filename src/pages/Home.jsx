@@ -4,7 +4,7 @@ import SalesProduct from "../components/SalesProduct";
 
 class Home extends React.Component {
   render() {
-    let countDownDate = new Date("Jul 5, 2022 20:30:00").getTime();
+    let countDownDate = new Date("Jul 5, 2022 22:42:00").getTime();
 
     let x = setInterval(function () {
       let now = new Date().getTime();
