@@ -58,12 +58,12 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div className="sb-nav-fixed">
-        <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark justify-content-between">
+        <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark shadow-sm justify-content-between">
           <div className="container-fluid px-2 px-lg-3 mx-3">
             <Link to="/">
-              <img src={require("../assets/img/laptopu2.png")} width="200px" alt="LaptopU Logo" />
+              <img src={require("../assets/img/laptopu.png")} width="200px" alt="LaptopU Logo" />
             </Link>
-            <button className="btn btn-outline-danger" onClick={this.logout}>
+            <button className="btn btn-outline-danger btn-apricot" onClick={this.logout}>
               Logout
             </button>
           </div>

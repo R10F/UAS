@@ -23,12 +23,12 @@ class Catalog extends React.Component {
       );
     });
     return (
-      <div className="container py-5">
+      <main className="container py-5">
         <div className="row">
           <h1>Catalog</h1>
           <div className="row">{allproduct}</div>
         </div>
-      </div>
+      </main>
     );
   }
 }

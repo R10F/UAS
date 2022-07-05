@@ -31,7 +31,7 @@ class About extends React.Component {
         <section>
           <div className="container">
             <div className="row" style={{ marginBottom: "5rem" }}>
-              <h1 className="text-center my-3 text-teal" data-aos="fade-down">
+              <h1 className="text-center my-3 text-blue" data-aos="fade-down">
                 ABOUT US
               </h1>
 
@@ -48,7 +48,7 @@ class About extends React.Component {
             </div>
 
             <div className="row">
-              <h1 className="text-center mt-3 mb-4 text-teal judul" data-aos="fade-down" data-aos-duration="2000">
+              <h1 className="text-center mt-3 mb-4 text-blue judul" data-aos="fade-down" data-aos-duration="2000">
                 CONTACT US
               </h1>
             </div>

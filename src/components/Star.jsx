@@ -10,11 +10,11 @@ class Star extends React.Component {
           <small className="text-muted">No rating yet</small>
         ) : (
           <>
-            {[...Array(this.props.rating)].map((star) => {
-              return <FaStar className="text-warning" />;
+            {[...Array(this.props.rating)].map((star, index) => {
+              return <FaStar className="text-warning" key={"star" + star + index}/>;
             })}
-            {[...Array(5 - this.props.rating)].map((star) => {
-              return <FaStar className="text-muted" />;
+            {[...Array(5 - this.props.rating)].map((star, index) => {
+              return <FaStar className="text-muted" key={"star" + star + (5-index)}/>;
             })}
           </>
         )}
