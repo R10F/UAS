@@ -22,7 +22,15 @@ class App extends React.Component {
       appliedCode: false
     }
   }
-
+  payment =() => {
+    let newcart = [];
+    this.setState((state) => ({
+      cartQty: 0,
+      cartTotal: 0,
+      cartItems: newcart,
+      appliedCode: false
+    }))
+  }
   update = (index, inc) => {
     this.setState((state) => ({
       cartQty: state.cartQty + inc,
@@ -102,7 +110,7 @@ class App extends React.Component {
           <Route index element={<Home products={this.state.products} addToCart={this.addToCart} />} />
           <Route path="/catalog" element={<Catalog products={this.state.products} addToCart={this.addToCart} />} />
           <Route path="/catalog/:productId" element={<SingleCatalog getProduct={this.getProduct} addToCart={this.addToCart} />} />
-          <Route path="/cart" element={<Cart addToCart={this.addToCart} deleteFromCart={this.deleteFromCart} applyCode={this.applyCode} cartItems={this.state.cartItems} cartQty={this.state.cartQty} cartTotal={this.state.cartTotal} appliedCode={this.state.appliedCode}/>} />
+          <Route path="/cart" element={<Cart addToCart={this.addToCart} deleteFromCart={this.deleteFromCart} applyCode={this.applyCode} cartItems={this.state.cartItems} cartQty={this.state.cartQty} cartTotal={this.state.cartTotal} appliedCode={this.state.appliedCode} payment={this.payment} />} />
         </Route>
 
         <Route path="/admin" element={<Login />} />

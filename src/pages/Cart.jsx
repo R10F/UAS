@@ -12,10 +12,18 @@ class Cart extends React.Component {
     };
   }
   payment = () => {
-    Swal.fire({
-      icon: "success",
-      text: "Thanks For Shopping! ",
-    });
+    if (this.props.cartTotal <= 0) {
+      Swal.fire({
+        icon: "danger",
+        html: "Your cart is still empty!",
+      });
+    } else {
+      Swal.fire({
+        icon: "success",
+        text: "Thanks For Shopping! ",
+      });
+      this.props.payment();
+    }
   };
 
   discountNotApplied = () => {
@@ -56,6 +64,7 @@ class Cart extends React.Component {
               <div className="alert alert-warning">
                 Oops, shopping cart is empty!
                 <Link to="/catalog" className="text-success" style={{ fontWeight: 500 }}>
+                  {" "}
                   Add something to your cart !
                 </Link>
               </div>
@@ -72,6 +81,7 @@ class Cart extends React.Component {
                             <small className="text-muted text-decoration-line-through fs-6"> {new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(this.props.cartTotal)}</small>
                           </p>
                           <p className="ms-4 text-success shadow-sm p-2">
+                            {" "}
                             <FiAward /> Discount applied
                           </p>
                         </>
