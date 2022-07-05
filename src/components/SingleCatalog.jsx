@@ -7,7 +7,7 @@ export default function SingleCatalog(props) {
   let product = props.getProduct(parseInt(params.productId, 10));
 
   return (
-    <article className="container-fluid p-5" data-aos="zoom-out-down" data-aos-duration="2000" data-aos-once="true">
+    <article className="container-fluid p-5">
       <div className="row ">
         <div className="col-lg-5">
           <div className="card">

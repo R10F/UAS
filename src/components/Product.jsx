@@ -6,7 +6,9 @@ import "aos/dist/aos.css";
 
 class Product extends React.Component {
   render() {
-    Aos.init();
+    Aos.init({
+      once: true,
+    });
     let harga;
     this.props.productDetail.isSales
       ? (harga = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(this.props.productDetail.salePrice))

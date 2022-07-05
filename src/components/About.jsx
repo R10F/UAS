@@ -24,7 +24,9 @@ class About extends React.Component {
   };
 
   render() {
-    Aos.init();
+    Aos.init({
+      once: true,
+    });
 
     return (
       <Fragment>
