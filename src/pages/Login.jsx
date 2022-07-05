@@ -48,7 +48,7 @@ class Login extends React.Component {
                             <input class="form-control" id="inputPassword" type="password" placeholder="Password" />
                             <label for="inputPassword">Password</label>
                           </div>
-                          <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                          <div class="d-grid mt-4 mb-0">
                             <button type="submit" class="btn btn-primary">
                               Login
                             </button>

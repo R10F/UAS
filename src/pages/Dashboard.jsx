@@ -1,5 +1,5 @@
-import React from "react";
 import Swal from "sweetalert2";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { Chart as ChartJS } from "chart.js/auto";
 import { Chart } from "react-chartjs-2";
@@ -51,7 +51,7 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-      <div class="sb-nav-fixed">
+      <Fragment>
         <nav className="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
           <div className="container-fluid px-2 px-lg-3 mx-3">
             <Link to="/">
@@ -66,8 +66,8 @@ class Dashboard extends React.Component {
           </div>
         </nav>
 
-        <div id="layoutSidenav" className="container pb-5">
-          <div id="layoutSidenav_content" className="ps-lg-0">
+        <div className="container pb-5">
+          <div className="ps-lg-0">
             <main>
               <div className="container-fluid px-4">
                 <h1 className="text-center mt-4 mb-5">Dashboard</h1>
@@ -116,7 +116,7 @@ class Dashboard extends React.Component {
         <div className="mt-5">
           <Footer />
         </div>
-      </div>
+      </Fragment>
     );
   }
 

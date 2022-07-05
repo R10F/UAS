@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
 import Aos from "aos";
-import "aos/dist/aos.css";
 import Swal from "sweetalert2";
+import React, { Fragment } from "react";
+import "aos/dist/aos.css";
 
 class About extends React.Component {
   submit = () => {
@@ -30,7 +30,7 @@ class About extends React.Component {
       <Fragment>
         <header>
           <div className="container">
-            <div className="row">
+            <div className="row" style={{ marginBottom: "5rem" }}>
               <h1 className="text-center my-3 text-teal" data-aos="fade-down">
                 ABOUT US
               </h1>
@@ -46,12 +46,13 @@ class About extends React.Component {
                 </p>
               </div>
             </div>
+
             <div className="row">
-              <h1 className="text-center mt-3 mb-2 text-teal judul" data-aos="fade-down">
+              <h1 className="text-center mt-3 mb-4 text-teal judul" data-aos="fade-down">
                 CONTACT US
               </h1>
             </div>
-            <div className="row justify-content-center">
+            <div className="row justify-content-center mb-5">
               <div className="col-md-6">
                 <form className="needs-validation" data-aos="zoom-out-down" data-aos-duration="1200">
                   <div className="form-floating mb-3">
