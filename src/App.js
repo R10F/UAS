@@ -105,7 +105,6 @@ class App extends React.Component {
 
   render() {
     return (
-      // --------routing msh blm pasti ya ges. nnti klo perlu, sesuaiin ajaa -er
       <Routes>
         <Route path="/" element={<Layout inCart={this.state.cartQty} />}>
           <Route index element={<Home products={this.state.products} addToCart={this.addToCart} />} />

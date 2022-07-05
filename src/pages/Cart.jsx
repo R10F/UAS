@@ -47,7 +47,7 @@ class Cart extends React.Component {
     let allcartitem = this.props.cartItems.map((cartitem) => {
       return <CartPerProduct productDetail={cartitem} key={"cart" + cartitem.id} addToCart={this.props.addToCart} deleteFromCart={this.props.deleteFromCart} />;
     });
-    console.log(this.props.appliedCode);
+
     return (
       <>
         <section className="container h-100 py-5">

@@ -5,7 +5,6 @@ class ProductItem extends React.Component {
     e.preventDefault();
 
     const input = e.target.getElementsByClassName("form-control");
-    console.log(input[3].value);
 
     this.props.editProduct(this.props.product.id, {
       name: input[0].value,
@@ -71,7 +70,7 @@ class ProductItem extends React.Component {
 
                     <div className="form-check form-switch mb-4">
                       <input className="form-check-input" type="checkbox" role="switch" id={"editProductModalInput-4" + this.props.product.id} defaultChecked={this.props.product.isSales} />
-                      <label className="form-check-label" for={"editProductModalInput-4" + this.props.product.id}>
+                      <label className="form-check-label" htmlFor={"editProductModalInput-4" + this.props.product.id}>
                         Sale
                       </label>
                     </div>
@@ -80,7 +79,7 @@ class ProductItem extends React.Component {
                       Sale Price
                     </label>
                     <div className="input-group mb-4">
-                      <span class="input-group-text" id="basic-addon1">
+                      <span className="input-group-text" id="basic-addon1">
                         Rp
                       </span>
                       <input type="text" className="form-control" id={"editProductModalInput-5" + this.props.product.id} defaultValue={this.props.product.salePrice} />

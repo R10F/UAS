@@ -28,7 +28,7 @@ class About extends React.Component {
 
     return (
       <Fragment>
-        <header>
+        <section>
           <div className="container">
             <div className="row" style={{ marginBottom: "5rem" }}>
               <h1 className="text-center my-3 text-teal" data-aos="fade-down">
@@ -48,13 +48,13 @@ class About extends React.Component {
             </div>
 
             <div className="row">
-              <h1 className="text-center mt-3 mb-4 text-teal judul" data-aos="fade-down">
+              <h1 className="text-center mt-3 mb-4 text-teal judul" data-aos="fade-down" data-aos-duration="2000">
                 CONTACT US
               </h1>
             </div>
             <div className="row justify-content-center mb-5">
               <div className="col-md-6">
-                <form className="needs-validation" data-aos="zoom-out-down" data-aos-duration="1200">
+                <form className="needs-validation" data-aos="zoom-out-down" data-aos-duration="1500">
                   <div className="form-floating mb-3">
                     <input type="text" className="form-control" id="floatingInput" placeholder="Input Your Name" required />
                     <label htmlFor="floatingInput">Name </label>
@@ -81,7 +81,7 @@ class About extends React.Component {
               </div>
             </div>
           </div>
-        </header>
+        </section>
       </Fragment>
     );
   }

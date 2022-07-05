@@ -43,11 +43,18 @@ class Dashboard extends React.Component {
       confirmButtonText: "Yes, logout!",
     }).then((result) => {
       if (result.isConfirmed) {
+        localStorage.setItem("laptopuLogin", false);
         window.location.replace("/");
       }
     });
   };
 
+  componentWillMount() {
+    const isLogin = localStorage.getItem("laptopuLogin");
+    if (isLogin === null || isLogin === "false") {
+      window.location.replace("/admin");
+    }
+  }
   render() {
     return (
       <div className="sb-nav-fixed">
@@ -108,7 +115,6 @@ class Dashboard extends React.Component {
             </main>
           </div>
         </div>
-
         <div className="mt-5">
           <Footer />
         </div>
