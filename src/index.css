@@ -4,6 +4,7 @@
   font-family: Epilogue;
   src: url(./assets/font/Epilogue-VariableFont_wght.ttf);
 }
+
 body {
   margin: 0;
   font-family: Epilogue, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
@@ -14,13 +15,16 @@ body {
 .text-muted {
   color: #bcbcbc !important;
 }
-.text-justify{
+
+.text-justify {
   text-align: justify;
 }
+
 /* Product */
 .product-wap {
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
 }
+
 .card.product-wap .card .product-overlay {
   background: rgba(0, 0, 0, 0.2);
   visibility: hidden;
@@ -39,10 +43,14 @@ body {
   font-family: "Fraunces", cursive;
 }
 
-.text-teal{
+.text-teal {
   color: #90B5ae;
 }
 
-.text-danger{
+.text-danger {
   color: #e73119 !important;
+}
+
+.bg-red {
+  background-color: #e73119;
 }

@@ -7,8 +7,7 @@ import { FcSalesPerformance } from "react-icons/fc";
 import { BsCart4 } from "react-icons/bs";
 import Footer from "../components/admin/Footer";
 import ProductItem from "../components/admin/ProductItem";
-import { NavLink } from "react-router-dom";
-import Aos from "aos";
+
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
@@ -51,14 +50,13 @@ class Dashboard extends React.Component {
   };
 
   render() {
-    Aos.init();
     return (
       <div class="sb-nav-fixed">
         <nav className="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
           <div className="container-fluid px-2 px-lg-3 mx-3">
-            <NavLink to="/">
+            <Link to="/">
               <img src={require("../assets/img/laptopu2.png")} width="200px" alt="LaptopU Logo" />
-            </NavLink>
+            </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -71,7 +69,7 @@ class Dashboard extends React.Component {
         <div id="layoutSidenav" className="container pb-5">
           <div id="layoutSidenav_content" className="ps-lg-0">
             <main>
-              <div className="container-fluid px-4" data-aos="zoom-out-down" data-aos-duration="1500">
+              <div className="container-fluid px-4">
                 <h1 className="text-center mt-4 mb-5">Dashboard</h1>
 
                 <div className="card mb-5">
@@ -85,7 +83,7 @@ class Dashboard extends React.Component {
                   <div className="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
                 </div>
 
-                <div className="card mb-4" data-aos="fade-down" data-aos-duration="2000" data-aos-offset="300">
+                <div className="card mb-4">
                   <div className="card-header text-center">
                     <BsCart4 className="me-1" />
                     Product List

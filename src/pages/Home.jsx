@@ -3,17 +3,6 @@ import About from "../components/About";
 import SalesProduct from "../components/SalesProduct";
 
 class Home extends React.Component {
-  // constructor() {
-  //   super();
-  //   // this.items = [
-  //   //   [require("../assets/img/card1.png"), "ROG Zephyrus Duo (2022) ", "Rp 59.999.000", "Rp 58.999.000"],
-  //   //   [require("../assets/img/card1.png"), "ROG Strix Scar 17 (2022)", "Rp 46.408.000", "Rp 45.408.082"],
-  //   //   [require("../assets/img/card1.png"), "ROG Zephyrus M16 (2022) ", "Rp44.389.900", "Rp43.389.900"],
-  //   //   [require("../assets/img/card1.png"), "ROG Strix Scar 15 (2022) ", "Rp34.298.991", "Rp33.298.991"],
-  //   //   [require("../assets/img/card1.png"), "ASUS TUF Gaming F15 (2022) ", "Rp23.499.000", "Rp22.499.000"],
-  //   //   [require("../assets/img/card1.png"), "2021 ASUS TUF Dash F15 ", "Rp18.999.000", "Rp17.999.000"],
-  //   // ];
-  // }
   render() {
     let countDownDate = new Date("Jul 6, 2022 23:59:00").getTime();
 

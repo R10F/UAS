@@ -3,6 +3,8 @@ import CartPerProduct from "../components/CartPerProduct";
 import { Outlet } from "react-router-dom";
 import { FiPlus, FiMinus, FiTrash2 } from "react-icons/fi";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
+
 class Cart extends React.Component {
   payment = () => {
     Swal.fire({
@@ -10,6 +12,7 @@ class Cart extends React.Component {
       text: "Thanks For Shopping! ",
     });
   };
+
   render() {
     let allcartitem = this.props.cartItems.map((cartitem) => {
       return <CartPerProduct productDetail={cartitem} key={"cart" + cartitem.id} addToCart={this.props.addToCart} deleteFromCart={this.props.deleteFromCart} />;
@@ -27,24 +30,28 @@ class Cart extends React.Component {
               </div> */}
             </div>
 
-            {this.props.cartItems.length === 0 ? (
-              <h2>Oops, shopping cart is empty!</h2>
-            ) : (
+            {this.props.cartItems.length === 0 ?
+              <div className="alert alert-warning">
+                Oops, shopping cart is empty!
+                <Link to="/catalog" className="text-success" style={{ fontWeight: 500 }}> Add something to your cart !</Link>
+              </div>
+              :
               <>
                 {allcartitem}
                 <div className="card mb-4 bg-teal">
-                  <form className="card-body p-4 d-flex flex-row">
-                    <input type="text" id="discount" className="form-control form-control-lg" placeholder="Discount Code" />
-                    <button type="submit" className="btn btn-outline-dark btn-lg ms-3">
-                      Apply
-                    </button>
-                  </form>
+                  <div className="card-body p-4">
+                    <p className="fs-4">
+                      Total: {new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(this.props.cartTotal)}
+                    </p>
+                    <form className="d-flex flex-row">
+                      <input type="text" id="discount" className="form-control form-control-lg" placeholder="Discount Code" />
+                      <button type="submit" className="btn btn-outline-dark btn-lg ms-3">Apply</button>
+                    </form>
+                  </div>
+
                 </div>
-                <button type="button" className="btn btn-success btn-lg" onClick={this.payment}>
-                  Proceed to Pay
-                </button>
-              </>
-            )}
+                <button type="button" className="btn btn-success btn-lg">Proceed to Pay</button>
+              </>}
           </div>
         </section>
       </>
