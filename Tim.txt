@@ -31,3 +31,6 @@ Keterangan Tambahan:
     username: admin
     password: admin
 - Kode kupon: apple100
+
+
+Link Source Product Asus : https://www.asus.com/id/Laptops/For-Gaming/All-series/filter?Spec=126644
