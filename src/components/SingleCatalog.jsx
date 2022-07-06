@@ -5,7 +5,7 @@ import Star from "../components/Star";
 export default function SingleCatalog(props) {
   let params = useParams();
   let product = props.getProduct(parseInt(params.productId, 10));
-  console.log(product);
+
   return (
     <article className="container-fluid p-5">
       <div className="row ">
