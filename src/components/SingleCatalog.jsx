@@ -5,7 +5,7 @@ import Star from "../components/Star";
 export default function SingleCatalog(props) {
   let params = useParams();
   let product = props.getProduct(parseInt(params.productId, 10));
-
+  console.log(product);
   return (
     <article className="container-fluid p-5" data-aos="zoom-out-down" data-aos-duration="2000" data-aos-once="true">
       <div className="row ">
@@ -27,7 +27,7 @@ export default function SingleCatalog(props) {
           <p className="my-2 lh-lg">
             <Star rating={product.rating} />
             <br />
-            <b>Merk: </b>{product.merk}<br />
+            <b>Merk: </b>ASUS<br />
             <b>Spesifikasi:</b> <br />
           </p>
           <ul>

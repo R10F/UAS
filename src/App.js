@@ -96,7 +96,6 @@ class App extends React.Component {
 
     productList[index]["nama"] = updatedProduct["name"];
     productList[index]["harga"] = updatedProduct["price"];
-    productList[index]["color"] = updatedProduct["color"];
     productList[index]["isSales"] = updatedProduct["isSales"];
     productList[index]["salePrice"] = updatedProduct["salePrice"];
 

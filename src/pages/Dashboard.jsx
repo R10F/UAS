@@ -99,7 +99,6 @@ class Dashboard extends React.Component {
                           <th>Name</th>
                           <th>Price</th>
                           <th>Rating</th>
-                          <th>Color</th>
                           <th>Action</th>
                         </tr>
                       </thead>
