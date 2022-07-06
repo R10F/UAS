@@ -27,7 +27,7 @@ export default function SingleCatalog(props) {
           <p className="my-2 lh-lg">
             <Star rating={product.rating} />
             <br />
-            <b>Merk: </b>
+            <b>Merk: Asus </b>
             {product.merk}
             <br />
             <b>Spesifikasi:</b> <br />
