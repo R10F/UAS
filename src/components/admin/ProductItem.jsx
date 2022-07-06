@@ -9,8 +9,7 @@ class ProductItem extends React.Component {
     this.props.editProduct(this.props.product.id, {
       name: input[0].value,
       price: input[1].value,
-      color: input[2].value,
-      salePrice: input[3].value,
+      salePrice: input[2].value,
       isSales: e.target.querySelector(".form-check-input").checked,
     });
   };
@@ -26,7 +25,6 @@ class ProductItem extends React.Component {
         <td>{this.props.product.nama}</td>
         <td>{harga}</td>
         <td>{this.props.product.rating ? this.props.product.rating : "-"}</td>
-
         <td>
           <button className="btn btn-warning" data-bs-toggle="modal" data-bs-target={"#editProductModal-" + this.props.product.id}>
             Edit
